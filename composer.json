@@ -4,7 +4,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Julian\\M5PetEmergancyCollar\\": "src/"
+            "Kiki\\ComposerQrcode\\": "src/"
         }
     },
     "authors": [
@@ -12,5 +12,11 @@
             "name": "JuleZ"
         }
     ],
-    "require": {}
+    "require": {
+        "endroid/qr-code": "^4.4",
+        "twbs/bootstrap": "5.0.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9"
+    }
 }
