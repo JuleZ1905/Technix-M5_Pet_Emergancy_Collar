@@ -1,0 +1,16 @@
+{
+    "name": "julian/m5_pet_emergancy_collar",
+    "description": "A webpage with qrCode",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Julian\\M5PetEmergancyCollar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JuleZ"
+        }
+    ],
+    "require": {}
+}
