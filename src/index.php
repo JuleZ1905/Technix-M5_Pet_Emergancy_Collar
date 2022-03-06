@@ -31,21 +31,30 @@ use Kiki\ComposerQrcode\QrCode;
                     <input class="btn" type="submit" value="Submit" name="submit">
             </div>
             </form>
-            
+
             <?php
             if (isset($_POST['submit'])) {
                 $vorname = $_POST["name"];
                 $nachname = $_POST["last-name"];
                 $tel = $_POST["phone-number"];
                 $infos = $_POST["infos"];
+
                 $owner = new Owner($vorname, $nachname, $tel, $infos);
                 $qr = new QrCode($owner);
-            ?>
-                <div class="vertical-line"></div>
-                <div class="qrCode-section">
-                    <img src='<?php echo $qr->getDataURI() ?>'>
-                    <a href="<?php echo $qr->getDataURI() ?>" download="qr_code">Download QrCode!</a>
-                </div>
+                if ($owner->checkPhoneNumber()) { ?>
+                    <div class="vertical-line"></div>
+                    <div class="qrCode-section">
+                        <img src='<?php echo $qr->getDataURI() ?>'>
+                        <a href="<?php echo $qr->getDataURI() ?>" download="qr_code">Download QrCode!</a>
+                    </div>
+                <?php
+                } else { ?>
+                    <p>
+                        Invalid input entered!
+                    </p>
+                <?php
+                }
+                ?>
             <?php
 
             }
