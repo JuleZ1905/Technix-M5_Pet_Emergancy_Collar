@@ -31,14 +31,11 @@ class QrCode
 
     function create_QrCode(Owner $owner)
     {
-
         $result = Builder::create()
             ->writer(new PngWriter())
-            ->writerOptions([])
             ->data($owner)
             ->encoding(new Encoding('UTF-8'))
             ->errorCorrectionLevel(new ErrorCorrectionLevelHigh())
-            ->roundBlockSizeMode(new RoundBlockSizeModeMargin())
             ->build();
 
             $this->dataURI = $result->getDataUri();

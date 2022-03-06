@@ -1,57 +1,62 @@
 <?php
 //vendor niemals commiten
 namespace Kiki\ComposerQrcode;
+
 require('../vendor/autoload.php');
+
 class Owner
 {
-private string $name;
-private string $telephonnumber;
+    protected $vorname;
+    protected $nachname;
+    protected $telefonnummer;
+    protected $infos;
 
-    /**
-     * @param string $name
-     * @param string $telephonnumber
-     */
-    public function __construct(string $name, string $telephonnumber)
+    public function __construct($vorname, $nachname, $telefonnummer, $infos)
     {
-        $this->name = $name;
-        $this->telephonnumber = $telephonnumber;
+        $this->vorname = $vorname;
+        $this->nachname = $nachname;
+        $this->telefonnummer = $telefonnummer;
+        $this->infos = $infos;
     }
 
     /**
-     * @return string
+     * Get the value of vorname
      */
-    public function getName(): string
+    public function getVorname()
     {
-        return $this->name;
+        return $this->vorname;
     }
 
     /**
-     * @param string $name
+     * Get the value of nachname
      */
-    public function setName(string $name): void
+    public function getNachname()
     {
-        $this->name = $name;
+        return $this->nachname;
     }
 
     /**
-     * @return string
+     * Get the value of telefonnummer
      */
-    public function getTelephonnumber(): string
+    public function getTelefonnummer()
     {
-        return $this->telephonnumber;
+        return $this->telefonnummer;
     }
 
     /**
-     * @param string $telephonnumber
+     * Get the value of infos
      */
-    public function setTelephonnumber(string $telephonnumber): void
+    public function getInfos()
     {
-        $this->telephonnumber = $telephonnumber;
+        return $this->infos;
     }
 
     public function __toString()
     {
-        //return $this->getName().' ('. $this->getTelephonnumber().')';
-        return "<a href=\"tel:06764428228\">" . $this->getTelephonnumber() . "</a>";
+        return "Guten Tag, Sie haben mein Haustier gefunden.\n\nHier koennen Sie mich erreichen:\n"
+        . $this->getVorname() . $this->getNachname() . "\n"
+        . $this->getTelefonnummer() . "\n\n" 
+        . "Weitere Anmerkungen: \n"
+        . $this->getInfos();
     }
 }

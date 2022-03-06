@@ -1,5 +1,6 @@
 :root {
-    --bg-color: lightgrey;
+    --bg-color: #d2f0ca;
+    --font-color: #3aaa35;
 }
 
 html {
@@ -8,7 +9,7 @@ html {
     max-width: 100%;
     max-height: 100%;
     margin: auto;
-    background: linear-gradient(to bottom, #0abadabb, #f116b0);
+    background: var(--bg-color);
 }
 
 main {
@@ -19,15 +20,16 @@ main {
 
 h1 {
     font-size: 6em;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    color: var(--font-color);
 }
 
 .section {
     display: flex;
     justify-content: center;
     background-color: white;
-    max-width: 40%;
+    min-width: 50%;
     border-radius: 20px;
     padding: 2em;
     box-shadow: 0 11px 35px 2px rgba(0, 0, 0, 0.1);
@@ -36,16 +38,32 @@ h1 {
 .form {
     box-shadow: 0 11px 35px 2px rgba(0, 0, 0, 0.1);
     padding: 1em;
+    min-width: 40%;
+}
+
+input[type="text"] {
+    outline: 0;
+    border: none;
+    width: 100%;
+    height: 3em;
+    border-bottom: 3px solid var(--font-color);
 }
 
 .vertical-line {
     border: 2px solid;
-    margin: 0 30px;
-    border-image: linear-gradient( to bottom, #0abadabb, #f116b0) 1 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-color: var(--font-color);
     border-radius: 100%;
 }
 
 img {
-    width: 18em;
-    height: 18em;
+    width: 28em;
+    height: 28em;
+}
+
+.qrCode-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
