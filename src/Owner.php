@@ -54,8 +54,8 @@ class Owner
     public function __toString()
     {
         return "Guten Tag, Sie haben mein Haustier gefunden.\n\nHier koennen Sie mich erreichen:\n"
-        . $this->getVorname() . $this->getNachname() . "\n"
-        . $this->getTelefonnummer() . "\n\n" 
+        . "Name: " . $this->getVorname() . " " . $this->getNachname() . "\n"
+        . "Telefonnummer: " . $this->getTelefonnummer() . "\n\n" 
         . "Weitere Anmerkungen: \n"
         . $this->getInfos();
     }
