@@ -10,6 +10,7 @@ class OwnerTest extends TestCase
     public function test_Owner()
     {
         $yes = new Owner("Micheal Jordan", "1894713847");
+        
     }
     
 }

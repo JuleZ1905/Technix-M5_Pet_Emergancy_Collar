@@ -52,6 +52,6 @@ private string $telephonnumber;
     public function __toString()
     {
         //return $this->getName().' ('. $this->getTelephonnumber().')';
-        return $this->getTelephonnumber();
+        return "<a href=\"tel:06764428228\">" . $this->getTelephonnumber() . "</a>";
     }
 }
