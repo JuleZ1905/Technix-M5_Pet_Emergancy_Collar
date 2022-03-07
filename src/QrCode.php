@@ -1,7 +1,6 @@
 <?php
 
 namespace Kiki\ComposerQrcode;
-require('../vendor/autoload.php');
 use Kiki\ComposerQrcode\Owner;
 use Endroid\QrCode\Builder\Builder;
 use Endroid\QrCode\Encoding\Encoding;

@@ -2,7 +2,7 @@
     "name": "endroid/qr",
     "autoload": {
         "psr-4": {
-            "Endroid\\Qr\\": "src/"
+            "Kiki\\ComposerQrcode\\": "src/"
         }
     },
     "authors": [

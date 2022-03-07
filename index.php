@@ -2,7 +2,7 @@
 
 namespace Kiki\ComposerQrcode;
 
-require('../vendor/autoload.php');
+require('vendor/autoload.php');
 
 use Kiki\ComposerQrcode\Owner;
 use Kiki\ComposerQrcode\QrCode;
@@ -13,8 +13,8 @@ use Kiki\ComposerQrcode\QrCode;
 <head>
     <meta charset="UTF-8">
     <title>Telefonnummer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" media="print" href="css/print.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" media="print" href="src/css/print.css">
 </head>
 
 <body>
