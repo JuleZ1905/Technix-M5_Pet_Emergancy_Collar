@@ -2,7 +2,7 @@
 //vendor niemals commiten
 namespace Kiki\ComposerQrcode;
 
-require('../vendor/autoload.php');
+require('vendor/autoload.php');
 
 class Owner
 {

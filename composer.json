@@ -7,11 +7,9 @@
             "Kiki\\ComposerQrcode\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "JuleZ"
-        }
-    ],
+    "authors": [{
+        "name": "JuleZ"
+    }],
     "require": {
         "endroid/qr-code": "^4.4"
     },
