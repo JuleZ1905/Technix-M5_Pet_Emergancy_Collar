@@ -1,0 +1,11 @@
+.print-header {
+    display: block;
+}
+
+.header, .left, .vertical-line, .qrCode-section a {
+    display: none;
+}
+
+.section {
+    box-shadow: none;
+}
